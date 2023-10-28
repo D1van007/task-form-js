@@ -1,0 +1,13 @@
+@import 'fonts.scss';
+
+$font-size: 1rem;
+$font-color-primary: #191919;
+$font-color-secondary: #e6e6e6;
+$font-color-ligth-gray: #b3b3b3;
+$font-family: 'Helvetica', 'Arial', sans-serif;
+
+html {
+  font-size: $font-size;
+  color: $font-color-primary;
+  font-family: $font-family;
+}
