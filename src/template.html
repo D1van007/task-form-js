@@ -2,19 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Быстрый запуск Webpack</title>
+    <title>Feedback form</title>
   </head>
   <body>
-    <p>Файл создан wqwdqплагином html-webpack-plugin</p>
-    <div>
-      <img src="./assets/images/qnapIcon.png" alt="" />
-    </div>
-    <div>
-      <img src="./assets/images/qnapIcon.png" alt="" />
-    </div>
-    <div>
-      <img src="./assets/images/qnapIcon.png" alt="" />
-    </div>
-    <div><img src='./assets/images/windows-black.svg' alt="" /></div>
+    <header class="header"></header>
+
+    <main class="main_container">
+      <section class="information_content">
+        <div class="information_location">
+          <img src="./assets/icons/map-position.svg" alt="location icon" />
+          <h4>Адрес</h4>
+          <p>Минск, ул.Калиновского</p>
+        </div>
+        <div class="information_phone">
+          <img src="./assets/icons/phone.svg" alt="phone icon" />
+          <h4>Телефон</h4>
+          <p>+375 29 752 13 64</p>
+        </div>
+        <div class="information_email">
+          <img src="./assets/icons/email.svg" alt="email icon" />
+          <h4>Эл. почта</h4>
+          <p>aliaksandr.dzivin@gmail.com</p>
+        </div>
+      </section>
+      <section class="form_container">
+        <div class="form_content">
+          <h3>Отправить сообщение</h3>
+          <form>
+            <input type="text" placeholder="Введите ваше имя" />
+            <input type="email" placeholder="Введите ваш email" />
+            <input id="inputTel" type="tel" placeholder="Введите ваш телефон" />
+            <textarea rows="3" placeholder="Введите ваше сообщение"></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
   </body>
+  <script src="./index.js"></script>
 </html>

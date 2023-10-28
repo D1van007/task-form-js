@@ -1,13 +1,122 @@
-@import 'fonts.scss';
-
-$font-size: 1rem;
-$font-color-primary: #191919;
-$font-color-secondary: #e6e6e6;
-$font-color-ligth-gray: #b3b3b3;
-$font-family: 'Helvetica', 'Arial', sans-serif;
+@import "reset-styles.scss";
+@import "variables.scss";
 
 html {
   font-size: $font-size;
   color: $font-color-primary;
-  font-family: $font-family;
+  font-family: $font-family-primary;
+}
+
+body {
+  background-image: url(./../assets/images/main-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  background-color: rgba(55, 5, 55, 0.5);
+  color: #fff;
+  min-height: 10vh;
+}
+
+.main_container {
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 5rem 0 15rem;
+}
+
+.information_content {
+  display: flex;
+  flex-direction: column;
+  min-width: 25rem;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 30rem;
+  align-items: center;
+  color: $font-color-ligth-gray;
+}
+.information_location,
+.information_phone,
+.information_email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    height: 2.5rem;
+  }
+  h4 {
+    font-size: 1.3rem;
+    font-family: $font-family-title;
+  }
+}
+
+.form_container {
+  align-items: center;
+  height: 30rem;
+  color: $font-color-primary;
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+  min-width: 25rem;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  max-width: 25rem;
+  padding: 2.5rem;
+  border-radius: 0.3rem;
+  h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 100;
+    font-family: $font-family-title;
+    margin-bottom: 1.5rem;
+    height: 30rem;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    input,
+    textarea {
+      border: solid 1px $font-color-ligth-gray;
+      border-radius: 0.15rem;
+      outline: none;
+      &::placeholder {
+        color: $font-color-ligth-gray;
+      }
+    }
+    textarea {
+      resize: none;
+      padding: 0.5rem 0.875rem;
+      margin-bottom: 1rem;
+    }
+    input {
+      height: 2.5rem;
+      padding: 0 0.875rem;
+    }
+    button {
+      background-color: #047afe;
+      border: none;
+      color: $font-color-secondary;
+      height: 2.5rem;
+      border-radius: 0.15rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.footer {
+  background-color: rgba(55, 5, 55, 0.5);
+  color: #fff;
+  min-height: 10vh;
 }
