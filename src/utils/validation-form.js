@@ -1,18 +1,14 @@
+import { submitForm } from "./api";
+import { callModal } from "./../components/modal";
+
 const form = document.querySelector("#form");
 const inputName = form.querySelector("#inputName");
 const inputEmail = form.querySelector("#inputEmail");
 const inputTel = form.querySelector("#inputTel");
-const textareaMessage = form.querySelector("#textarea");
+const textareaMessage = form.querySelector("#message");
 
 const isValidForm = () => {
-  //   const addErrorMessage = (currentInput, message) => {
-  //     const errorMessageNode = document.createElement("p");
-  //     errorMessageNode.textContent = message;
-  //     currentInput.insertAdjacentElement("afterend", errorMessageNode);
-  //   };
-
   const addValidationMessage = (isValid, currentInput, message) => {
-    console.log(currentInput.nextElementSibling);
     if (!isValid) {
       currentInput.classList.add("error");
       currentInput.nextElementSibling.textContent = message;
@@ -56,7 +52,12 @@ const isValidForm = () => {
 export const validationForm = () => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    const formData = new FormData(form);
 
-    isValidForm() && form.submit();
+    isValidForm() &&
+      submitForm(formData).then((res) => {
+        form.reset()
+        callModal(res);
+      }).catch(error => callModal(error));
   });
 };

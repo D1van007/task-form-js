@@ -5,9 +5,11 @@
     <title>Feedback form</title>
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+      <button id="openModalBtn">Обо мне</button>
+    </header>
 
-    <main class="main_container">
+    <main class="main">
       <section class="information_content">
         <div class="information_location">
           <img src="./assets/icons/map-position.svg" alt="location icon" />
@@ -30,28 +32,41 @@
           <h3>Отправить сообщение</h3>
           <form id="form" novalidate>
             <div class="input_container">
-              <input id="inputName" type="text" placeholder="Введите ваше имя" />
+              <input id="inputName" type="text" name="name" placeholder="Введите ваше имя" />
               <p></p>
             </div>
             <div class="input_container">
-              <input id="inputEmail" type="email" placeholder="Введите ваш email" />
+              <input id="inputEmail" type="email" name="email" placeholder="Введите ваш email" />
               <p></p>
             </div>
             <div class="input_container">
-              <input id="inputTel" type="tel" placeholder="+375 (__) ___-__-__" />
+              <input id="inputTel" type="tel" name="tel" placeholder="+375 (__) ___-__-__" />
               <p></p>
             </div>
             <div class="input_container">
-              <textarea id="textarea" rows="3" placeholder="Введите ваше сообщение"></textarea>
+              <textarea
+                id="message"
+                rows="3"
+                name="message"
+                type="message"
+                placeholder="Введите ваше сообщение"
+              ></textarea>
               <p></p>
             </div>
             <button id="formSubmitButton" type="submit">Отправить</button>
           </form>
         </div>
       </section>
+
     </main>
 
-    <footer class="footer"></footer>
+    <div id="modalBackground" class="modal-background"></div>
+    <div id="modal" class="modal">
+      <h2 id="modalTitle">Обо мне</h2>
+      <p id="modalContent">
+      </p>
+      <button id="closeModalBtn">Закрыть</button>
+    </div>
   </body>
   <script src="./index.js"></script>
 </html>
