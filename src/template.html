@@ -28,12 +28,24 @@
       <section class="form_container">
         <div class="form_content">
           <h3>Отправить сообщение</h3>
-          <form>
-            <input type="text" placeholder="Введите ваше имя" />
-            <input type="email" placeholder="Введите ваш email" />
-            <input id="inputTel" type="tel" placeholder="+375 (__) ___-__-__" />
-            <textarea rows="3" placeholder="Введите ваше сообщение"></textarea>
-            <button type="submit">Отправить</button>
+          <form id="form" novalidate>
+            <div class="input_container">
+              <input id="inputName" type="text" placeholder="Введите ваше имя" />
+              <p></p>
+            </div>
+            <div class="input_container">
+              <input id="inputEmail" type="email" placeholder="Введите ваш email" />
+              <p></p>
+            </div>
+            <div class="input_container">
+              <input id="inputTel" type="tel" placeholder="+375 (__) ___-__-__" />
+              <p></p>
+            </div>
+            <div class="input_container">
+              <textarea id="textarea" rows="3" placeholder="Введите ваше сообщение"></textarea>
+              <p></p>
+            </div>
+            <button id="formSubmitButton" type="submit">Отправить</button>
           </form>
         </div>
       </section>

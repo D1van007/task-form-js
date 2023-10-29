@@ -17,7 +17,7 @@
     "serve": "webpack serve --open --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "build:prod": "webpack --config webpack.config.prod.js"
+    "build:prod": "webpack --config webpack.config.prod.js",
   },
   "devDependencies": {
     "filemanager-webpack-plugin": "^8.0.0",
