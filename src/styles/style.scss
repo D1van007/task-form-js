@@ -1,14 +1,61 @@
-@import 'fonts.scss';
-
-$font-size: 1rem;
-$font-color-primary: #191919;
-$font-color-secondary: #e6e6e6;
-$font-color-ligth-gray: #b3b3b3;
-$font-family: 'Helvetica', 'Arial', sans-serif;
+@import "reset-styles.scss";
+@import "variables.scss";
+@import "information.scss";
+@import "form.scss";
+@import "modal.scss";
 
 html {
-  font-size: $font-size;
-  color: $font-color-primary;
-  font-family: $font-family;
+  font-size: $size;
+  color: $color-primary;
+  font-family: $family-primary;
+}
+
+body {
+  background-image: url(./../assets/images/main-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  min-height: 10vh;
+  z-index: 10;
+  button {
+    background-color: transparent;
+    border: 2px solid $color-ligth-white;
+    color: $color-ligth-white;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.15rem;
+    margin: 0 2rem 0 auto;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 1px 2px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7),
+        1px 2px 4px 0px rgba(0, 255, 255, 0.7), 1px 2px 4px 0px rgba(0, 255, 255, 0.7);
+    }
+    &:active {
+      background-color: rgba(55, 5, 55, 0.8);
+      color: $color-ligth-white;
+    }
+  }
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 5rem 0 15rem;
+  z-index: 10;
 }
 
