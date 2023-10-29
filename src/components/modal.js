@@ -40,10 +40,9 @@ export const callModal = (response) => {
     if (!responseObject) return;
     if (response.status === 200) {
       title = "Уведомление";
-      message = responseObject.message;
+      message = responseObject.msg;
       currentColorTitle = modalTitleColor.success;
     } else {
-      console.log(responseObject);
       title = "Ошибка";
       if (!responseObject.fields) {
         message = "Ошибка сервера";
